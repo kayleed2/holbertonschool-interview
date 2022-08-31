@@ -5,8 +5,5 @@ can be opened, contains function that returns bool
 """
 
 
-from typing import List
-
-
-def canUnlockAll(boxes: List[List]) -> bool:
+def canUnlockAll(boxes):
     """Function to determine if boxes can be opened, returns with bool"""
