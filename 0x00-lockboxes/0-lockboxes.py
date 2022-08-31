@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-"""Module containing method to find whether all boxes can be opened"""
+"""
+Module containing method to find whether all boxes
+can be opened, contains function that returns bool
+"""
+
 
 from typing import List
 
