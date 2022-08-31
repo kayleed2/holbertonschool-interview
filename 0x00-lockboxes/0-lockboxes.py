@@ -5,4 +5,4 @@ from typing import List
 
 
 def canUnlockAll(boxes: List[List]) -> bool:
-    
+    """Function to determine if boxes can be opened, returns with bool"""
