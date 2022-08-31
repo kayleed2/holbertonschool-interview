@@ -1,0 +1,8 @@
+#!/usr/bin/python3
+"""Module containing method to find whether all boxes can be opened"""
+
+from typing import List
+
+
+def canUnlockAll(boxes: List[List]) -> bool:
+    
