@@ -11,16 +11,18 @@ def canUnlockAll(boxes):
     unlocked_boxes = [0]
     for el in boxes[0]:
         unlocked_boxes.append(el)
-    
+
     for i in unlocked_boxes:
+        if i >= num_of_boxes:
+            continue
         for num in boxes[i]:
             if num < num_of_boxes and num not in unlocked_boxes:
                 unlocked_boxes.append(num)
-    
+
     for check in range(num_of_boxes):
         if check in unlocked_boxes:
             continue
         else:
             return False
-    
+
     return True
