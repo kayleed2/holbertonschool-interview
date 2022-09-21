@@ -13,7 +13,7 @@ def minOperations(n):
     in exactly n H characters in the file"""
     if n <= 1:
         return 0
-    
+
     dp = [sys.maxsize] * (n + 1)
 
     # Initial state
