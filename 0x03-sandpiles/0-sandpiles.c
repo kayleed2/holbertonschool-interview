@@ -20,6 +20,7 @@ void sandpiles_sum(int grid1[3][3], int grid2[3][3])
 			grid1[row][col] += grid2[row][col];
 		}
 	}
+    print_grid(grid1);
 
 }
 
