@@ -8,8 +8,8 @@ int is_palindrome(unsigned long n)
 	unsigned long reversed, remainder;
 	unsigned long original = n;
 
-    if (!n)
-        return (0);
+    if (n == 0)
+        return (1);
 
 	while (n != 0)
 	{
@@ -18,7 +18,7 @@ int is_palindrome(unsigned long n)
 		n /= 10;
 	}
 
-	if (original == reversed || original == 0)
+	if (original == reversed)
 		return (1);
 	
 	return (0);
