@@ -20,8 +20,6 @@ int is_palindrome(unsigned long n)
 
 	if (original == reversed)
 		return (1);
-	
-	printf("Original: %lu\n Reversed: %lu\n", original, reversed);
-	
+
 	return (0);
 }
