@@ -5,7 +5,8 @@
 
 int is_palindrome(unsigned long n)
 {
-	unsigned long reversed, remainder;
+	unsigned long reversed = 0;
+	unsigned long remainder = 0;
 	unsigned long original = n;
 	
 	if (n < 10)
