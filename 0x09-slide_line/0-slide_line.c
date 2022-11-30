@@ -1,31 +1,31 @@
 #include "slide_line.h"
 
 /**
- * reverse_array - reverses an array in pointer
+ * reverse_array - reverses an array
  *
- * @array: array pointer to revers
- * @size: size of array to reverse
+ * @array: pointer to reverse
+ * @size: size
  */
 void reverse_array(int *array, size_t size)
 {
-	size_t old, new, temp;
+	size_t cur, new, tmp;
 
-	for (old = 0, new = size - 1; old < size / 2; old++, new --)
+	for (cur = 0, new = size - 1; cur < size / 2; cur++, new --)
 	{
-		temp = array[old];
-		array[old] = array[new];
-		array[new] = temp;
+		tmp = array[cur];
+		array[cur] = array[new];
+		array[new] = tmp;
 	}
 }
 
 /**
  * slide_line - Slide and combine integers like 2048
  *
- * @line: pointer to int array of size @size
- * @size: size of int array
- * @direction: 1/0 to indicate SLIDE_LEFT or SLIDE_RIGHT
+ * @line: int array of size
+ * @size: size
+ * @direction: SLIDE_LEFT or SLIDE_RIGHT
  *
- * Return: 1 upon success, or 0 upon failure
+ * Return: 1 success, or 0 failure
  */
 int slide_line(int *line, size_t size, int direction)
 {
@@ -56,6 +56,7 @@ int slide_line(int *line, size_t size, int direction)
 				line[two] = two == size - 1 ? 0 : line[two + 1];
 		}
 	}
+
 
 	if (direction == SLIDE_RIGHT)
 		reverse_array(line, size);
