@@ -20,14 +20,28 @@ void menger(int level)
         {
             for (row = 0; row < size; row++)
             {
-                if ((col % 3 == 1) && (row % 3 == 1))
-                    printf(" ");
-                else
-                    printf("%c", '#');
-            // col /= 3;
-		    // row /= 3;
+               printf("%c", (print(row, col)));
             }
             printf("\n");
         }
     }
+}
+
+/**
+ * print - prints certain char
+ *
+ * @row: row
+ * @col: col
+ */
+
+char print(int row, int col)
+{
+    while (row || col)
+	{
+		if (row % 3 == 1 && col % 3 == 1)
+			 return(' ');
+		row /= 3;
+		col /= 3;
+	}
+	return('#');
 }
