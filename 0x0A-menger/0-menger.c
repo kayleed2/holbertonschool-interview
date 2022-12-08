@@ -13,7 +13,7 @@ size = pow(3, level);
 
 if (level == 0)
 {
-printf("%c", '#');
+printf("%c\n", '#');
 }
 else if (level > 0)
 {
