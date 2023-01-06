@@ -3,9 +3,10 @@
 0_rain
 """
 
+
 def rain(walls):
     """how much water is being retained by the walls"""
-    if walls == None:
+    if walls is None:
         return 0
 
     sum = 0
