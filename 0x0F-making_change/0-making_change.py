@@ -8,8 +8,8 @@ def makeChange(coins, total):
     # If total is 0 or less, return 0
     if total <= 0:
         return 0
-    
-    # Initialize the array to store the minimum number of coins needed to make each amount
+
+    # Initialize array,store the min number of coins needed
     minCoin = [float('inf')] * (total + 1)
     # The minimum number of coins needed to make 0 is 0
     minCoin[0] = 0
