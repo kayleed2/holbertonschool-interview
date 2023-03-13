@@ -9,7 +9,7 @@ def isWinner(x, nums):
         return None
 
     if not nums:
-       return None
+        return None
 
     maria = 0
     ben = 0
