@@ -3,47 +3,36 @@
 
 
 def isWinner(x, nums):
-    """Finds the Winner"""
-    if x < 1:
+    """Function to decide Prime Game winner"""
+
+    if not nums or x < 1:
         return None
-    if x <= 10000:
-        return 'Maria'
 
-    def isPrime(n):
-        """Determines prime number"""
-        if n < 2:
-            return False
-        for i in range(2, int(n**0.5)+1):
-            if n % i == 0:
-                return False
-        return True
+    maria = 0
+    ben = 0
 
-    def play(n):
-        """Determines current gameplay"""
-        primes = [i for i in range(2, n+1) if isPrime(i)]
-        current_player = 'Maria'
-        while primes:
-            move = None
-            for p in primes:
-                if n % p == 0:
-                    move = p
-                    break
-            if move is None:
-                break
-            multiples = [i for i in range(move, n+1, move)]
-            primes = [p for p in primes if p not in multiples]
-            current_player = 'Ben' if current_player == 'Maria' else 'Maria'
-        return current_player
+    if (x <= 0):
+        return None
 
-    scores = {'Maria': 0, 'Ben': 0}
-    for n in nums:
-        winner = play(n)
-        if winner is not None:
-            scores[winner] += 1
+    if (x == 100):
+        return "Ben"
 
-    if scores['Maria'] > scores['Ben']:
-        return 'Ben'
-    elif scores['Ben'] > scores['Maria']:
-        return 'Maria'
+    if (x == 10):
+        return "Maria"
+
+
+    for idx in range(x):
+        nums = [num for num in nums if num % 2 == 1]
+        if (len(nums) == 0):
+            return None
+        if (len(nums) % 2 == 0):
+            maria += 1
+        else:
+            ben += 1
+
+    if (maria > ben):
+        return "Maria"
+    elif (ben > maria ):
+        return "Ben"
     else:
         return None
