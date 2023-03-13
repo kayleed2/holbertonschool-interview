@@ -20,7 +20,6 @@ def isWinner(x, nums):
     if (x == 10):
         return "Maria"
 
-
     for idx in range(x):
         nums = [num for num in nums if num % 2 == 1]
         if (len(nums) == 0):
@@ -32,7 +31,7 @@ def isWinner(x, nums):
 
     if (maria > ben):
         return "Maria"
-    elif (ben > maria ):
+    elif (ben > maria):
         return "Ben"
     else:
         return None
