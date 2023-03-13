@@ -5,8 +5,11 @@
 def isWinner(x, nums):
     """Function to decide Prime Game winner"""
 
-    if not nums or x < 1:
+    if (x < 1):
         return None
+
+    if not nums:
+       return None
 
     maria = 0
     ben = 0
