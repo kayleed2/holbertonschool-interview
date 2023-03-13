@@ -4,6 +4,8 @@
 
 def isWinner(x, nums):
     """Finds the Winner"""
+    if x < 1:
+        return None
     def isPrime(n):
         """Determines prime number"""
         if n < 2:
@@ -37,8 +39,8 @@ def isWinner(x, nums):
             scores[winner] += 1
 
     if scores['Maria'] > scores['Ben']:
-        return 'Maria'
-    elif scores['Ben'] > scores['Maria']:
         return 'Ben'
+    elif scores['Ben'] > scores['Maria']:
+        return 'Maria'
     else:
         return None
